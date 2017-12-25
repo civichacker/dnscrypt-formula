@@ -1,0 +1,5 @@
+{% from "dnscrypt/map.jinja" import dnscrypt with context %}
+
+RUNTIME_OPTS="--user=dnscrypt --daemonize --pidfile=/var/run/dnscrypt-wrapper.pid"
+KEY_OPTS="--provider-publickey-file={{ dnscrypt.config_dir }}/public.key --provider-secretkey-file={{ dnscrypt.config_dir }}/private.key --crypt-secretkey-file={{ dnscrypt.config_dir }}/{{ dnscrypt.dnscrypt_key }} --provider-cert-file={{ dnscrypt.config_dir }}/{{ dnscrypt.provider_cert }} --provider-name={{ dnscrypt.provider_name }}"
+NETWORK_OPTS="--listen-address={{ dnscrypt.listen_address }} --resolver-address={{ dnscrypt.resolver }}"

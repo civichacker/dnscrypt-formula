@@ -1,0 +1,11 @@
+dnscrypt:
+  user: dnscrypt
+  group: dnscrypt
+  install_prefix: /usr/local
+  config_dir: /etc/dnscrypt
+  build_dir: /tmp/dnscrypt-wrapper
+  listen_address: 0.0.0.0:443
+  provider_cert: 1.cert
+  dnscrypt_key: 1.key
+  cert_expiration: 365
+  resolver: 8.8.8.8:53

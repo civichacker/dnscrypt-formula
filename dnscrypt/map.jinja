@@ -1,0 +1,7 @@
+{% import_yaml "dnscrypt/defaults.yaml" as defaults %}
+{% set dnscrypt = salt['pillar.get'](
+    'dnscrypt',
+    default=defaults.dnscrypt,
+    merge=True
+    )
+%}
