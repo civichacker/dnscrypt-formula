@@ -1,0 +1,3 @@
+dnscrypt:
+  provider_name: 2.dnscrypt.example.com
+  resolver: 8.8.4.4:53
